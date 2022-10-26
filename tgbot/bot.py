@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import asyncio
 import logging
 
@@ -5,13 +7,12 @@ from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 # from aiogram.contrib.fsm_storage.redis import RedisStorage2
 
-from telegram_bot.tgbot.config import load_config
-from telegram_bot.tgbot.handlers.weather import register_weather
-from telegram_bot.tgbot.handlers.user import register_user
-from telegram_bot.tgbot.services.setting_commands import set_default_commands
+from tgbot.config import load_config
+from tgbot.handlers.weather import register_weather
+from tgbot.handlers.user import register_user
+from tgbot.services.setting_commands import set_default_commands
 
 logger = logging.getLogger(__name__)
-
 
 
 def register_all_handlers(dp):
